@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem_01_Hurt_007_0: 613711893370214104
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

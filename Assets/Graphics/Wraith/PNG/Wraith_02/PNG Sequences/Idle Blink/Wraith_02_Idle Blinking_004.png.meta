@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wraith_02_Idle Blinking_004_0: -5846875435405993179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem_03_Jump Start_005_0: -8400687382447814367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

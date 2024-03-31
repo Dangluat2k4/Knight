@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem_02_Dying_014_0: 3185464816351497897
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

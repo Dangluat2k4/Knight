@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem_01_Taunt_011_0: -4817505308465363843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

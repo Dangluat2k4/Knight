@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem_03_Attacking_003_0: -7685108537777484673
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

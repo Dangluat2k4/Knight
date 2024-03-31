@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wraith_03_Hurt_000_0: -5349250229852917711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

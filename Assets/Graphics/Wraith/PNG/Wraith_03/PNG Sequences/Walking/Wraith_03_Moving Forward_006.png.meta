@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wraith_03_Moving Forward_006_0: -8811553772381754915
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

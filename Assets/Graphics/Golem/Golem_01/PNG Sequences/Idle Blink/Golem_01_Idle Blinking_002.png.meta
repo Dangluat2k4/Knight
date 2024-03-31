@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Golem_01_Idle Blinking_002_0: -7250934298171884320
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wraith_03_Taunt_013_0: 461334869222951610
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
