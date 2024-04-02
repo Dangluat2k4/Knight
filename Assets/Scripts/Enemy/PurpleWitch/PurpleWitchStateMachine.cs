@@ -1,18 +1,27 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PurpleWitchStateMachine : MonoBehaviour
+public class PurpleWitchStateMachine
 {
-    // Start is called before the first frame update
-    void Start()
+    public PurpleWitchState currentState
     {
-        
+        get; private set;
+        // lay gia tri cua no cong khai, doc duoc tu ben ngoai va thiet lap ben trong 
     }
-
-    // Update is called once per frame
-    void Update()
+    // khai bao trang thai ban dau
+    public void Initialize(PurpleWitchState _startState)
     {
-        
+        currentState = _startState;
+        currentState.Enter();
+    }
+    // khoi tạo trạng thái ban đầu của người chơi 
+    public void ChangeState(PurpleWitchState _newState)
+    {
+
+        currentState.Exit();
+        currentState = _newState;
+        currentState.Enter();
+
     }
 }
