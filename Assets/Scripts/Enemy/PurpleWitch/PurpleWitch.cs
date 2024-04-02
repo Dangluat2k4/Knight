@@ -2,28 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PurpleWitch : Entity
+public class PurpleWitch : Enemy
 {
     // Start is called before the first frame update
-    public float left,
-        right;
+    public float left, right;
     public float speed = 1;
 
-    public PurpleWitchStateMachine stateMachine { get; private set; }
+    // Remove the redeclaration of stateMachine here
+
     public PurpleWitchMoveState moveState { get; private set; }
     public PurpleWitchIdleState idleState { get; private set; }
     public PurpleWitchAttackState attackState { get; private set; }
-    [Header("Move info sw")]
-    public float moveSpeed = 5f;
+
     protected override void Awake()
     {
         base.Awake();
-        stateMachine = new PurpleWitchStateMachine();
-        moveState = new PurpleWitchMoveState(this, stateMachine, "Move");
-        idleState = new PurpleWitchIdleState(this, stateMachine, "Idle");
+        moveState = new PurpleWitchMoveState(this, stateMachine, "Move", this);
+        idleState = new PurpleWitchIdleState(this, stateMachine, "Idle", this);
         attackState = new PurpleWitchAttackState(this, stateMachine, "Attack");
-
-
     }
 
     protected override void Start()
@@ -35,6 +31,5 @@ public class PurpleWitch : Entity
     protected override void Update()
     {
         base.Update();
-        stateMachine.currentState.Update();
     }
 }

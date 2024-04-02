@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PurpleWitchGroundState : PurpleWitchState
+public class PurpleWitchGroundState : EnemyState
 {
-    public PurpleWitchGroundState(PurpleWitch _purpleWitch, PurpleWitchStateMachine _stateMachine, string _animBoolName) : base(_purpleWitch, _stateMachine, _animBoolName)
+    protected PurpleWitch purpleWitch;
+    public PurpleWitchGroundState(PurpleWitch _purpleWitch, EnemyStateMachine _stateMachine, string _animBoolName, PurpleWitch purpleWitch) : base(_purpleWitch, _stateMachine, _animBoolName)
     {
+        this.purpleWitch = purpleWitch;
     }
 
     public override void Enter()
