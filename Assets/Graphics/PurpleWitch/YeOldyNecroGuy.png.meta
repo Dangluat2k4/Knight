@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,364 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 100
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69af6b0b9bdca774db4948043521bf15
+      internalID: 583981149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 100
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0959fa246653144bdf99ba33295bbd
+      internalID: -186096125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 100
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d1be888c9736345a0d9659440a998e
+      internalID: 791202731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_3
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 100
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff15eb814bc67c347a6448e3eb8ebb0d
+      internalID: 720018354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 103
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08f707905ac1fc42b3056a745e16d06
+      internalID: -1006944327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_5
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 101
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78b347b7c10edc4ea0f5a71bfb58512
+      internalID: -827609223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_6
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 78
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641dbb95dc4289b41a95284530d1e00c
+      internalID: -1007625075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_7
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 79
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bdb3c4ed7488f4499a3a55d1003f1c
+      internalID: 1602385643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_8
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 78
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3117cef27b1fe594e990815aae427fd7
+      internalID: -1066268116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_9
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 78
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e204c9b6bacaefe4a90c7af49a4d45a1
+      internalID: -1946489394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_10
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 79
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e7775eb728da743abf848f58d083a2
+      internalID: -1423198709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_11
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 78
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e87114fba2aa1044815c44d0b7e13eb
+      internalID: 1499476145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_12
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 53
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f62f3311482e794bb21c8aecc556ae6
+      internalID: -1069364817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_13
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 21
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738965cb939dc244abbeb91aa36a02c2
+      internalID: 919856778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_14
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 21
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6bc7542e4db7634c832c2162c98c8fc
+      internalID: -1209838097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_15
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 21
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37180c757e32a0f48a8c51c3ed4edd19
+      internalID: 1548470438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YeOldyNecroGuy_16
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 21
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbcfac07e70643245917c04a6db92bb6
+      internalID: 1818914926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +476,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      YeOldyNecroGuy_0: 583981149
+      YeOldyNecroGuy_1: -186096125
+      YeOldyNecroGuy_10: -1423198709
+      YeOldyNecroGuy_11: 1499476145
+      YeOldyNecroGuy_12: -1069364817
+      YeOldyNecroGuy_13: 919856778
+      YeOldyNecroGuy_14: -1209838097
+      YeOldyNecroGuy_15: 1548470438
+      YeOldyNecroGuy_16: 1818914926
+      YeOldyNecroGuy_2: 791202731
+      YeOldyNecroGuy_3: 720018354
+      YeOldyNecroGuy_4: -1006944327
+      YeOldyNecroGuy_5: -827609223
+      YeOldyNecroGuy_6: -1007625075
+      YeOldyNecroGuy_7: 1602385643
+      YeOldyNecroGuy_8: -1066268116
+      YeOldyNecroGuy_9: -1946489394
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
