@@ -2,24 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarnivorousFlowerAttackState : EnemyState
+public class CarnivorousFlowerAttackState : MonoBehaviour
 {
-    public CarnivorousFlowerAttackState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName) : base(_enemyBase, _stateMachine, _animBollName)
+    // Start is called before the first frame update
+    void Start()
     {
+        
     }
 
-    public override void Enter()
+    // Update is called once per frame
+    void Update()
     {
-        base.Enter();
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
-    public override void Update()
-    {
-        base.Update();
+        
     }
 }
