@@ -2,26 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarnivorousFlower : Enemy
+public class CarnivorousFlower : MonoBehaviour
 {
-    public CarnivorousFlowerIdleState idleState { get; private set; }
-    public CarnivorousFlowerAttackState attackState { get; private set; }
-
-    protected override void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
-        base.Awake();
-        idleState = new CarnivorousFlowerIdleState(this, stateMachine, "Idle", this);
-        attackState = new CarnivorousFlowerAttackState(this, stateMachine, "Attack");
+        
     }
 
-    protected override void Start()
+    // Update is called once per frame
+    void Update()
     {
-        base.Start();
-        stateMachine.Initialize(idleState);
-    }
-
-    protected override void Update()
-    {
-        base.Update();
+        
     }
 }
