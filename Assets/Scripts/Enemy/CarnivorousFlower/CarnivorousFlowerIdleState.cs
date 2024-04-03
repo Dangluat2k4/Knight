@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarnivorousFlowerIdleState : MonoBehaviour
+public class CarnivorousFlowerIdleState : EnemyState
 {
-    // Start is called before the first frame update
-    void Start()
+    protected CarnivorousFlower carnivorous;
+    public CarnivorousFlowerIdleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, CarnivorousFlower _carnivorous) : base(_enemyBase, _stateMachine, _animBollName)
     {
-        
+        this.carnivorous = _carnivorous;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Enter()
     {
-        
+        base.Enter();
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+    }
+
+    public override void Update()
+    {
+        base.Update();
     }
 }
