@@ -11,13 +11,16 @@ public class Golem : Enemy
 
     public GolemMoveState moveState { get; private set; }
     public GolemIdleState idleState { get; private set; }
-    //public GolemAttackState attackState { get; private set; }
+    public GolemAttackState attackState { get; private set; }
+
+    public GolemBattleState battleState { get; private set; }
     protected override void Awake()
     {
         base.Awake();
         moveState = new GolemMoveState(this, stateMachine, "Move", this);
-        idleState = new GolemIdleState(this, stateMachine, "Idle", this);
-       // attackState = new GolemAttackState(this, stateMachine, "Attack");
+        idleState = new GolemIdleState(this, stateMachine, "Idle",this);
+        battleState = new GolemBattleState(this, stateMachine, "Move", this);
+        attackState = new GolemAttackState(this, stateMachine, "Attack",this);
     }
 
     protected override void Start()

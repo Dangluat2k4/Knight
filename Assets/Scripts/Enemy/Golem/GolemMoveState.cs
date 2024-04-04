@@ -2,13 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class GolemMoveState : GolemGroundState
 {
-    protected Golem golem;
     public GolemMoveState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, Golem _golem) : base(_enemyBase, _stateMachine, _animBollName, _golem)
     {
-        this.golem = _golem;
     }
 
     public override void Enter()
@@ -25,6 +24,13 @@ public class GolemMoveState : GolemGroundState
     public override void Update()
     {
         base.Update();
+        golem.SetVelocity(golem.moveSpeed * golem.facingDir, rb.velocity.y);
+        if (golem.IsWallDetected() || !golem.IsGroundDetected())
+        {
+            golem.Flip();
+            stateMachine.ChangeState(golem.idleState);
+        }
+        /*
         var golemPos = golem.transform.position.x;
         golem.SetVelocity(golem.moveSpeed * golem.facingDir, rb.velocity.y);
 
@@ -40,5 +46,6 @@ public class GolemMoveState : GolemGroundState
 
 
         }
+        */
     }
 }

@@ -18,6 +18,7 @@ public class Enemy : Entity
 
 
     // attack info
+    [Header ("Attack distance")]
     public float attackDistance;
     // thoi gian hoi chieu
     public float attackCooldown;
@@ -37,7 +38,7 @@ public class Enemy : Entity
     {
         base.Update();
         stateMachine.currentState.Update();
-        // Debug.Log(IsPlayerDetected().collider.gameObject.name + "I SEE");
+     //   Debug.Log(IsPlayerDetected().collider.gameObject.name + "I SEE");
     }
 
     public virtual void AssignLastAnimName(string _animBoolName)

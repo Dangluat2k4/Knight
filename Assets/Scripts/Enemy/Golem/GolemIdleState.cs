@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class GolemIdleState : GolemGroundState
 {
-    protected Golem golem;
     public GolemIdleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, Golem _golem) : base(_enemyBase, _stateMachine, _animBollName, _golem)
     {
-        this.golem = _golem;
     }
 
     public override void Enter()
