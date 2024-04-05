@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class PurpleWitchAnimationTriggers : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Golem  golem => GetComponentInParent<Golem>();
 
-    // Update is called once per frame
-    void Update()
+    private void AnimationTrigger()
     {
-        
+        golem.AnimationFinishTrigger();
     }
 }
+ 
