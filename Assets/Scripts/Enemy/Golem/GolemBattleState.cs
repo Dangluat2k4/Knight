@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class GolemBattleState : EnemyState
 {
+    // khai bao bien lay vi tri nguoi choi
     private Transform player;
+    // khai bao enemy
     private Golem golem;
     private int moveDrir;
+
     public GolemBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName,Golem _golem) : base(_enemyBase, _stateMachine, _animBollName)
     {
         this.golem = _golem;
@@ -15,6 +18,7 @@ public class GolemBattleState : EnemyState
     public override void Enter()
     {
         base.Enter();
+        // tim gameobject co ten la Player trong unity
         player = GameObject.Find("Player").transform;
         Debug.Log("Im in battle state");
     }
@@ -25,6 +29,7 @@ public class GolemBattleState : EnemyState
         
         if (golem.IsPlayerDetected())
         {
+            // stateTimer thoi gian cua tran chiên
             stateTimer = golem.BattleTime;
 
             if(golem.IsPlayerDetected().distance < golem.attackDistance)

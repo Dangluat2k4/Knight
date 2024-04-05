@@ -284,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 280613347}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -299,7 +299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 560608699}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 698316004}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1226399602}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: AttackCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 1412672159}
   - component: {fileID: 1412672160}
   - component: {fileID: 1412672161}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Fumiko
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,7 +725,7 @@ Transform:
   m_GameObject: {fileID: 1412672155}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0.01, z: 0}
+  m_LocalPosition: {x: 0.3, y: 0.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -863,19 +863,19 @@ MonoBehaviour:
     m_Bits: 64
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 512
   stunDiraction: 0
   stunDirection: {x: 0, y: 0}
   CanBeStuned: 0
   moveSpeed: 2
   idleTime: 2
   BattleTime: 5
-  attackDistance: 1.35
+  attackDistance: 1.45
   attackCooldown: 1
   lastTimeAttacked: 0
   left: 0
   right: 10
-  speed: 1.48
+  speed: 1
 --- !u!50 &1432863454
 Rigidbody2D:
   serializedVersion: 4
@@ -1285,7 +1285,7 @@ Transform:
   m_GameObject: {fileID: 1653341750}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.51, y: 0.43, z: 0}
+  m_LocalPosition: {x: 0.72, y: 0.43, z: 0}
   m_LocalScale: {x: 1.0849, y: 1.0849, z: 1.0849}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1303,7 +1303,7 @@ GameObject:
   - component: {fileID: 1752413023}
   - component: {fileID: 1752413025}
   - component: {fileID: 1752413024}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1561,7 +1561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1954685426}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -89,6 +89,7 @@ public class Enemy : Entity
 
     // cap nhat trang thai tan cong
     public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
+    // 1 : vi trí , 2: khoảng cách , 3 Check cái gì
     public virtual RaycastHit2D IsPlayerDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, 50, whatIsPlayer);
 
     protected override void OnDrawGizmos()

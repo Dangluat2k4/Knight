@@ -1,9 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GolemGroundState : EnemyState
 {
+    // GolemGroundState có những cái thêm khác với EnemyState
+    // từ GolemGroundState kế thừa từ EnemyState vvà thêm các phần khác 
     protected Golem golem;
 
     protected Transform player;
@@ -25,6 +27,7 @@ public class GolemGroundState : EnemyState
 
     public override void Update()
     {
+        // battleState là trạng thái chiến đấu 
         base.Update();
         if (golem.IsPlayerDetected() || Vector2.Distance(golem.transform.position, player.position) < 2)
         {
