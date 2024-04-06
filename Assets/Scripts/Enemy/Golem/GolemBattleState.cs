@@ -8,7 +8,7 @@ public class GolemBattleState : EnemyState
     private Transform player;
     // khai bao enemy
     private Golem golem;
-    private int moveDrir;
+    private int moveDir;
 
     public GolemBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName,Golem _golem) : base(_enemyBase, _stateMachine, _animBollName)
     {
@@ -26,54 +26,48 @@ public class GolemBattleState : EnemyState
     {
         base.Update();
 
-        
         if (golem.IsPlayerDetected())
         {
-            // stateTimer thoi gian cua tran chiên
             stateTimer = golem.BattleTime;
 
-            if(golem.IsPlayerDetected().distance < golem.attackDistance)
+            if (golem.IsPlayerDetected().distance < golem.attackDistance)
             {
                 if (CanAttack())
-                {
-                    // set lai su kien danh
                     stateMachine.ChangeState(golem.attackState);
-                }
             }
         }
         else
         {
-            if(stateTimer<0 || Vector2.Distance(player.transform.position, golem.transform.position) > 7)
-            {
+            if (stateTimer < 0 || Vector2.Distance(player.transform.position, golem.transform.position) > 7)
                 stateMachine.ChangeState(golem.idleState);
-            }
         }
 
-        if(player.position.x > golem.transform.position.x)
-        {
-            moveDrir = 1;
-        }
-        else if(player.position.x < golem.transform.position.x)
-        {
-            moveDrir = -1;
-        }
-        golem.SetVelocity(golem.moveSpeed * moveDrir, rb.velocity.y);
 
 
+
+
+
+        if (player.position.x > golem.transform.position.x)
+            moveDir = 1;
+        else if (player.position.x < golem.transform.position.x)
+            moveDir = -1;
+
+        golem.SetVelocity(golem.moveSpeed * moveDir, rb.velocity.y);
     }
 
     public override void Exit()
     {
         base.Exit();
     }
-    public bool CanAttack()
+
+    private bool CanAttack()
     {
         if (Time.time >= golem.lastTimeAttacked + golem.attackCooldown)
         {
             golem.lastTimeAttacked = Time.time;
             return true;
         }
+
         return false;
     }
-
 }
