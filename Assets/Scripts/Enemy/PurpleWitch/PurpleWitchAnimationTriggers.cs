@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PurpleWitchAnimationTriggers : MonoBehaviour
 {
-    private Golem  golem => GetComponentInParent<Golem>();
+    private PurpleWitch  purpleWitch => GetComponentInParent<PurpleWitch>();
 
     private void AnimationTrigger()
     {
-        golem.AnimationFinishTrigger();
+        purpleWitch.AnimationFinishTrigger();
     }
 }
  
