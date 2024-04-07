@@ -2,22 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GolemAttackState : EnemyState
+public class GolemAttackState : GolemGroundState
 {
-    private Golem golem;
-
-    public GolemAttackState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName,Golem _golem) : base(_enemyBase, _stateMachine, _animBollName)
+    public GolemAttackState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, Golem _golem) : base(_enemyBase, _stateMachine, _animBollName, _golem)
     {
-        this.golem = _golem;
     }
 
     public override void Enter()
     {
         base.Enter();
-    }
-    public override void Exit()
-    {
-        base.Exit();
         golem.lastTimeAttacked = Time.time;
     }
     public override void Update()
@@ -29,4 +22,11 @@ public class GolemAttackState : EnemyState
             stateMachine.ChangeState(golem.battleState);
         }
     }
+
+    public override void Exit()
+    {
+        base.Exit();
+    }
+
+
 }

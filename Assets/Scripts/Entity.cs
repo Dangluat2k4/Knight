@@ -83,7 +83,7 @@ public class Entity : MonoBehaviour
         Gizmos.DrawLine(groundCheck.position, new Vector3(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
         // thuc hien tan cong
-        Gizmos.DrawWireSphere(attackCkeck.position, attackCkeckRadius); 
+        Gizmos.DrawWireSphere(attackCkeck.position, attackCkeckRadius);
     }
 
 
