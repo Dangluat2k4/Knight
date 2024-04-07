@@ -41,6 +41,10 @@ public class PurpleWitchMoveState : EnemyState
 
 
         }
+        else if(purple.IsPlayerDetected())
+        {
+            stateMachine.ChangeState(purple.battleState);
+        }
 
 
         // muốn chạy code thì phải update lên 
