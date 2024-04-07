@@ -13,13 +13,15 @@ public class PurpleWitch : Enemy
     public PurpleWitchMoveState moveState { get; private set; }
     public PurpleWitchIdleState idleState { get; private set; }
     public PurpleWitchAttackState attackState { get; private set; }
+    public PurpleWitchBattleState battleState { get; private set; }
 
     protected override void Awake()
     {
         base.Awake();
         moveState = new PurpleWitchMoveState(this, stateMachine, "Move", this);
         idleState = new PurpleWitchIdleState(this, stateMachine, "Idle", this);
-        attackState = new PurpleWitchAttackState(this, stateMachine, "Attack");
+        attackState = new PurpleWitchAttackState(this, stateMachine, "Attack", this);
+        battleState = new PurpleWitchBattleState(this, stateMachine, "Move", this);
     }
 
     protected override void Start()
