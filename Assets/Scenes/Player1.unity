@@ -650,7 +650,7 @@ Transform:
   m_GameObject: {fileID: 1630592690}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.52, y: -1.71, z: 0}
+  m_LocalPosition: {x: -14.9402, y: -1.1611, z: 0}
   m_LocalScale: {x: 30.038294, y: 3.2651312, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -684,7 +684,7 @@ Transform:
   m_GameObject: {fileID: 1752413021}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.51, y: 0.58, z: 0}
+  m_LocalPosition: {x: 0.92, y: -2.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -972,7 +972,7 @@ Transform:
   m_GameObject: {fileID: 4281260191003666914}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.48, y: 2.87, z: 0}
+  m_LocalPosition: {x: 2.48, y: 5.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1173,7 +1173,7 @@ Transform:
   m_GameObject: {fileID: 3637914301667792924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.58, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1204,7 +1204,7 @@ Transform:
   m_GameObject: {fileID: 7812365490718426584}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.87, y: -0.38, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1462,7 +1462,7 @@ Transform:
   m_GameObject: {fileID: 7360421724862174092}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.52, y: 1.92, z: 0}
+  m_LocalPosition: {x: -0.08, y: 2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1487,25 +1487,25 @@ MonoBehaviour:
   knockbackDirection: {x: 0, y: 0}
   knockbackDuration: 0
   attackCkeck: {fileID: 2161889662471433496}
-  attackCkeckRadius: 0.63
+  attackCkeckRadius: 0
   groundCheck: {fileID: 115347374717103973}
   groundCheckDistance: 0
   wallCheck: {fileID: 1915828747353025357}
-  wallCheckDistance: 2
+  wallCheckDistance: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
   stunDiraction: 0
   stunDirection: {x: 0, y: 0}
   CanBeStuned: 0
   moveSpeed: 1
-  idleTime: 2
-  BattleTime: 3
-  attackDistance: 4
-  attackCooldown: 1
+  idleTime: 0
+  BattleTime: 0
+  attackDistance: 0
+  attackCooldown: 0
   lastTimeAttacked: 0
   left: 0
   right: 5
@@ -1930,7 +1930,6 @@ GameObject:
   - component: {fileID: 1228173262444466139}
   - component: {fileID: 6243364216636333164}
   - component: {fileID: 3185322643075013840}
-  - component: {fileID: 6870505744922685169}
   m_Layer: 0
   m_Name: PurpleWitch
   m_TagString: Untagged
@@ -1938,18 +1937,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &6870505744922685169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6870505744922685168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d441c9f31df6be749b7413be5dd8e28a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7009441477263533529
 GameObject:
   m_ObjectHideFlags: 0
