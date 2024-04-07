@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class CarnivorousFlowerAnimationTiggers : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Golem golem => GetComponentInParent<Golem>();
 
-    // Update is called once per frame
-    void Update()
+    private void AnimationTrigger()
     {
-        
+        golem.AnimationFinishTrigger();
     }
 }
