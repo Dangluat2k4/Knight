@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PurpleWitchAttackState : EnemyState
 {
-    public PurpleWitchAttackState(PurpleWitch _purpleWitch, EnemyStateMachine _stateMachine, string _animBoolName) : base(_purpleWitch, _stateMachine, _animBoolName)
+    private PurpleWitch purpleWitch;
+    public PurpleWitchAttackState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, PurpleWitch _purpleWitch) : base(_enemyBase, _stateMachine, _animBollName)
     {
+        this.purpleWitch = _purpleWitch;
     }
 
     public override void Enter()
@@ -21,5 +23,8 @@ public class PurpleWitchAttackState : EnemyState
     public override void Update()
     {
         base.Update();
+        purpleWitch.SetZeroVelocity();
+        if(triggerCalled)
+            stateMachine.ChangeState(purpleWitch.battleState);
     }
 }
