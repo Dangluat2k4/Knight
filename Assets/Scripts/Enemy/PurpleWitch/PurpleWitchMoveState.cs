@@ -5,8 +5,6 @@ using UnityEngine;
 public class PurpleWitchMoveState : EnemyState
 {
     protected PurpleWitch purple;
-
-    protected Transform player;
     // can khoi tao j them lien quan den Move thì ở đây
     public PurpleWitchMoveState(PurpleWitch _purpleWitch, EnemyStateMachine _stateMachine, string _animBoolName, PurpleWitch _purple) : base(_purpleWitch, _stateMachine, _animBoolName)
     {
@@ -19,7 +17,6 @@ public class PurpleWitchMoveState : EnemyState
         // khi khai báo song phải khởi tạo ở đây
         purple.SetVelocity(purple.moveSpeed * purple.facingDir, rb.velocity.y);
         // rb.velocity = new Vector2(purpleWitch.moveSpeed, 0);
-        player = GameObject.Find("Player").transform;
     }
 
     public override void Exit()
@@ -31,10 +28,6 @@ public class PurpleWitchMoveState : EnemyState
     {
         base.Update();
         var purpleWitchPos = purple.transform.position.x;
-        if (purple.IsGroundDetected() || Vector2.Distance(purple.transform.position, player.position) < 10)
-        {
-            stateMachine.ChangeState(purple.battleState);
-        }
         if (purpleWitchPos > purple.right)
         {
             Debug.Log("max");
@@ -48,7 +41,6 @@ public class PurpleWitchMoveState : EnemyState
 
 
         }
-        
 
 
         // muốn chạy code thì phải update lên 
