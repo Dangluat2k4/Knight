@@ -972,7 +972,7 @@ Transform:
   m_GameObject: {fileID: 4281260191003666914}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.48, y: 5.94, z: 0}
+  m_LocalPosition: {x: -2.94, y: 5.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -991,7 +991,7 @@ Transform:
   m_GameObject: {fileID: 7009441477263533529}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.73, y: -0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1732,24 +1732,24 @@ MonoBehaviour:
   knockbackDirection: {x: 0, y: 0}
   knockbackDuration: 0
   attackCkeck: {fileID: 899710300019905538}
-  attackCkeckRadius: 0
+  attackCkeckRadius: 1.14
   groundCheck: {fileID: 5291039035913595671}
   groundCheckDistance: 0
   wallCheck: {fileID: 1028960249035973474}
-  wallCheckDistance: 0
+  wallCheckDistance: 2.81
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   stunDiraction: 0
   stunDirection: {x: 0, y: 0}
   CanBeStuned: 0
   moveSpeed: 2
   idleTime: 1
   BattleTime: 0
-  attackDistance: 0
+  attackDistance: 2.68
   attackCooldown: 0
   lastTimeAttacked: 0
   left: 6
