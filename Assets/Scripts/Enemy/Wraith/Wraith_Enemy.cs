@@ -10,14 +10,18 @@ public class Wraith_Enemy : Enemy
     #region State
     public WraithIdleState idleState { get; private set; }
     public WraithMoveState moveState { get; private set; }
+    public WraithBattleState battleState { get; private set; }
+    public WraithimmirtalWithPlayer attackStateImmirtal { get; private set; }
     #endregion
     protected override void Awake()
     {
         base.Awake();
 
 
-        idleState = new WraithIdleState(this, stateMachine, "Idle", this);
+        idleState = new WraithIdleState(this, stateMachine, "Idle", this); 
         moveState = new WraithMoveState(this, stateMachine, "Move", this);
+        battleState = new WraithBattleState(this, stateMachine, "Move", this);
+        attackStateImmirtal = new WraithimmirtalWithPlayer(this, stateMachine, "IsImmune", this);
     }
 
     protected override void Start()

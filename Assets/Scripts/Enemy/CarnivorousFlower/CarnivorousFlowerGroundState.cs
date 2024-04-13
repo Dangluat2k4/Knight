@@ -2,17 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarnivorousFlowerGroundState : MonoBehaviour
+public class CarnivorousFlowerGroundState : EnemyState
 {
-    // Start is called before the first frame update
-    void Start()
+    protected CarnivorousFlower carnivorousFlower;
+    protected Transform player;
+
+
+    public CarnivorousFlowerGroundState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, CarnivorousFlower carnivorousFlower) : base(_enemyBase, _stateMachine, _animBollName)
     {
-        
+        this.carnivorousFlower = carnivorousFlower;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Enter()
     {
-        
+        base.Enter();
+        player = GameObject.Find("Player").transform;
+
+    }
+
+
+    public override void Exit()
+    {
+        base.Exit();
+    }
+
+    public override void Update()
+    {
+        base.Update();
+        if (carnivorousFlower.IsPlayerDetected() || Vector2.Distance(carnivorousFlower.transform.position, player.position) < 2)
+        {
+            stateMachine.ChangeState(carnivorousFlower.battleState);
+        }
     }
 }
