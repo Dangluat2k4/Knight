@@ -91,7 +91,7 @@ public class Enemy : Entity
     public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
     // 1 : vi trí , 2: khoảng cách , 3 Check cái gì
     public virtual RaycastHit2D IsPlayerDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir, 50, whatIsPlayer);
-
+    public virtual RaycastHit2D IsPlayerDetectedFL() => Physics2D.Raycast(wallCheck.position, Vector2.left * facingDir, 1, whatIsPlayer);
     protected override void OnDrawGizmos()
     {
         base.OnDrawGizmos();

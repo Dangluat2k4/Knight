@@ -6,16 +6,18 @@ using UnityEngine;
 public class CarnivorousFlowerIdleState : EnemyState
 {
     protected CarnivorousFlower carnivorous;
+    protected Transform player;
 
-    public CarnivorousFlowerIdleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, CarnivorousFlower carnivorous) : base(_enemyBase, _stateMachine, _animBollName)
+    public CarnivorousFlowerIdleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName,CarnivorousFlower _carnivorous) : base(_enemyBase, _stateMachine, _animBollName)
     {
-        this.carnivorous = carnivorous;
+        this.carnivorous = _carnivorous;
     }
 
     public override void Enter()
     {
         base.Enter();
-        stateTimer = carnivorous.idleTime;
+        stateTimer = 1f;
+        player = GameObject.Find("Player").transform;
 
     }
 
@@ -27,5 +29,9 @@ public class CarnivorousFlowerIdleState : EnemyState
     public override void Update()
     {
         base.Update();
+        if (carnivorous.IsPlayerDetectedFL())
+        {
+            stateMachine.ChangeState(carnivorous.battleState);
+        }
     }
 }
