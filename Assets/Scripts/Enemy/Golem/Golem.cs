@@ -14,6 +14,10 @@ public class Golem : Enemy
     public GolemAttackState attackState { get; private set; }
 
     public GolemBattleState battleState { get; private set; }
+
+    public GolemDeadState deadState { get; private set; }
+
+
     protected override void Awake()
     {
         base.Awake();
@@ -21,6 +25,7 @@ public class Golem : Enemy
         idleState = new GolemIdleState(this, stateMachine, "Idle",this);
         battleState = new GolemBattleState(this, stateMachine, "Move", this);
         attackState = new GolemAttackState(this, stateMachine, "Attack",this);
+        deadState = new GolemDeadState(this, stateMachine, "Die",this);
     }
 
     protected override void Start()
@@ -32,5 +37,11 @@ public class Golem : Enemy
     protected override void Update()
     {
         base.Update();
+    }
+    public override void Die()
+    {
+        base.Die();
+        stateMachine.ChangeState(deadState);
+        Destroy(gameObject, .4f);
     }
 }

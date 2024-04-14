@@ -16,7 +16,7 @@ public class PurpleWitchBattleState : EnemyState
     {
         base.Enter();
         player = GameObject.Find("Player").transform;
-        Debug.Log("Im in battle state");
+      //  Debug.Log("Im in battle state");
     }
 
     public override void Exit()
