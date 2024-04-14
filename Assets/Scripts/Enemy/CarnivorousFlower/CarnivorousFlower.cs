@@ -14,10 +14,9 @@ public class CarnivorousFlower : Enemy
     {
         base.Awake();
 
-        idleState = new CarnivorousFlowerIdleState(this, stateMachine, "Idle", this);
-        attackState = new CarnivorousFlowerAttackState(this, stateMachine, "Attack");
-        battleState = new CarnivorousFlowerBattleState(this, stateMachine, "Move", this);
-
+        idleState = new CarnivorousFlowerIdleState(this, stateMachine, "Idle",this);
+        attackState = new CarnivorousFlowerAttackState(this, stateMachine, "Attack",this);
+        battleState = new CarnivorousFlowerBattleState(this, stateMachine, "Attack", this);
     }
 
     protected override void Start()
