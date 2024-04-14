@@ -20,7 +20,7 @@ public class GolemBattleState : EnemyState
         base.Enter();
         // tim gameobject co ten la Player trong unity
         player = GameObject.Find("Player").transform;
-        Debug.Log("Im in battle state");
+    //    Debug.Log("Im in battle state");
     }
     public override void Update()
     {

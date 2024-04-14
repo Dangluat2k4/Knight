@@ -37,7 +37,7 @@ public class PurpleWitchMoveState : EnemyState
         }
         if (purpleWitchPos > purple.right)
         {
-            Debug.Log("max");
+          //  Debug.Log("max");
             purple.SetVelocity(-purple.moveSpeed, rb.velocity.y);
 
         }
