@@ -26,7 +26,7 @@ public class PlayerGroundState : PlayerState
         if (Input.GetKeyDown(KeyCode.J))
         {
             stateMachine.ChangeState(player.primaryAttack);
-            Debug.Log("taans cong");
+        //    Debug.Log("taans cong");
 
         }
         if (!player.IsGroundDetected())
@@ -35,12 +35,12 @@ public class PlayerGroundState : PlayerState
         if (Input.GetKeyDown(KeyCode.Space) && player.IsGroundDetected())
         {
             stateMachine.ChangeState(player.jumpState);
-            Debug.Log("jump");
+   //         Debug.Log("jump");
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             stateMachine.ChangeState(player.lightBallState);
-            Debug.Log("light Ball");
+        //    Debug.Log("light Ball");
         }
     }
 }

@@ -10,9 +10,11 @@ public class Entity : MonoBehaviour
     // dieu hien vat ly
     public Rigidbody2D rb { get; private set; }
     // kieu khien hieu ung
-
-
     public SpriteRenderer sr { get; private set; }
+    public CharacterStats stats { get; private set; }
+
+    public EntityFX fx { get; private set; }
+
     // Knockback info 
     // (Direction) huong knockBack khi bi tan cong
     [SerializeField] protected Vector2 knockbackDirection;
@@ -44,6 +46,8 @@ public class Entity : MonoBehaviour
     public int facingDir { get; private set; } = 1;
     // facingDir huong cua entity hien tai 
     protected bool facingRight = true;
+
+    public System.Action OnFlipped;
     protected virtual void Awake()
     {
 
@@ -54,6 +58,8 @@ public class Entity : MonoBehaviour
         sr = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        fx = GetComponentInChildren<EntityFX>();
+        stats = GetComponent<CharacterStats>();
     }
     protected virtual void Update()
     {
@@ -62,7 +68,8 @@ public class Entity : MonoBehaviour
     // tao ham thuc hien 1 cuoc tan cong
     public virtual void Damage()
     {
-        Debug.Log(gameObject.name + "was damaged");
+        fx.StartCoroutine("FLashFX");
+    //    Debug.Log(gameObject.name + " was damaged");
         StartCoroutine("HitKnockback");
     }
 
@@ -113,6 +120,10 @@ public class Entity : MonoBehaviour
         facingRight = !facingRight;
         // doi h??ng
         transform.Rotate(0, 180, 0);
+        if(OnFlipped != null)
+        {
+            OnFlipped();
+        }
     }
 
     // xac dinh co can lat mat hay khong thong qua _x
@@ -134,5 +145,10 @@ public class Entity : MonoBehaviour
         {
             sr.color = Color.white;
         }
+    }
+
+    public virtual void Die()
+    {
+
     }
 }
