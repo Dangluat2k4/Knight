@@ -31,7 +31,7 @@ public class WraithMoveState : EnemyState
         var WraithWitchPos = wraith.transform.position.x;
         if (WraithWitchPos > wraith.right)
         {
-            Debug.Log("max");
+          //  Debug.Log("max");
             wraith.SetVelocity(-wraith.moveSpeed, rb.velocity.y);
 
         }

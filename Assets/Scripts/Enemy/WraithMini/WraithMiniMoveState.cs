@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WraithMiniMoveState : EnemyState
+public class WraithMiniMoveState : WraithMiniGroundState
 {
-    protected WraithMini wraithMini;
-    public WraithMiniMoveState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, WraithMini _wraithMini) : base(_enemyBase, _stateMachine, _animBollName)
+
+    public WraithMiniMoveState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, WraithMini _wraithMini) : base(_enemyBase, _stateMachine, _animBollName, _wraithMini)
     {
-        this.wraithMini = _wraithMini;
+
     }
 
     public override void Enter()
