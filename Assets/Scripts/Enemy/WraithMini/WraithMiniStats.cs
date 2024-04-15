@@ -5,9 +5,9 @@ using UnityEngine;
 public class WraithMiniStats : CharacterStats
 {
     private WraithMini wraithMini;
-    public override void Die()
+    protected override void Start()
     {
-        base.Die();
+        base.Start();
         wraithMini = GetComponent<WraithMini>();
     }
 
@@ -17,8 +17,9 @@ public class WraithMiniStats : CharacterStats
         wraithMini.Damage();
     }
 
-    protected override void Start()
+    public override void Die()
     {
-        base.Start();
+        base.Die();
+        wraithMini.Die();
     }
 }
