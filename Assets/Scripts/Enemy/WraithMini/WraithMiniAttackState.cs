@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WraithMiniAttackState : EnemyState
 {
-    protected WraithMini wraithMini;
+    private WraithMini wraithMini;
     public WraithMiniAttackState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, WraithMini _wraithMini) : base(_enemyBase, _stateMachine, _animBollName)
     {
         this.wraithMini = _wraithMini;
@@ -18,10 +18,16 @@ public class WraithMiniAttackState : EnemyState
     public override void Exit()
     {
         base.Exit();
+        wraithMini.lastTimeAttacked = Time.time;
     }
 
     public override void Update()
     {
         base.Update();
+        wraithMini.SetZeroVelocity();
+        if (triggerCalled)
+        {
+            stateMachine.ChangeState(wraithMini.battleState);
+        }
     }
 }

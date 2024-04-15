@@ -18,6 +18,7 @@ public class PurpleWitchAttackState : EnemyState
     public override void Exit()
     {
         base.Exit();
+        purpleWitch.lastTimeAttacked = Time.time;
     }
 
     public override void Update()

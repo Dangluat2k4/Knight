@@ -29,7 +29,7 @@ public class CarnivorousFlowerGroundState : EnemyState
     public override void Update()
     {
         base.Update();
-        if (carnivorousFlower.IsPlayerDetectedFL() )
+        if (carnivorousFlower.IsPlayerDetectedFL())
         {
             stateMachine.ChangeState(carnivorousFlower.battleState);
         }
