@@ -33,7 +33,7 @@ public class CarnivorousFlowerBattleState : EnemyState
         }
         else
         {
-            if (stateTimer < 0 || Vector2.Distance(player.transform.position, flower.transform.position) > 7)
+            if (stateTimer < 0 || Vector2.Distance(player.transform.position, flower.transform.position) > 2f)
                 stateMachine.ChangeState(flower.idleState);
         }
     }
