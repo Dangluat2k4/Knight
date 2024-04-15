@@ -14,12 +14,14 @@ public class WraithMini : Enemy
     public WraithMiniIdleState wraithMiniIdle {  get; private set; }
     public WraithMiniMoveState wraithMiniMove { get; private set; }
     public WraithMiniAttackState wraithMiniAttack { get; private set; }
+    public WraithMiniBattleState battleState { get; private set; }
     protected override void Awake()
     {
         base.Awake();
-        wraithMiniIdle = new WraithMiniIdleState(this, stateMachine, "Idle", this);
+        wraithMiniIdle = new WraithMiniIdleState(this, stateMachine, "Idle",this);
         wraithMiniMove = new WraithMiniMoveState(this, stateMachine, "Move", this);
         wraithMiniAttack = new WraithMiniAttackState(this, stateMachine, "Attack", this);
+        battleState = new WraithMiniBattleState(this, stateMachine, "Move", this);
     }
 
     protected override void Start()

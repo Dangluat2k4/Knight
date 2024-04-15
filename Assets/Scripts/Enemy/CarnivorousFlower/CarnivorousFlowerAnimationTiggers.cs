@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CarnivorousFlowerAnimationTiggers : MonoBehaviour
 {
-    private Golem golem => GetComponentInParent<Golem>();
+    private CarnivorousFlower carnivorous => GetComponentInParent<CarnivorousFlower>();
 
     private void AnimationTrigger()
     {
-        golem.AnimationFinishTrigger();
+        carnivorous.AnimationFinishTrigger();
     }
 }

@@ -6,7 +6,6 @@ public class CarnivorousFlowerBattleState : EnemyState
 {
     private Transform player;
     private CarnivorousFlower flower;
-    private CarnivorousFlower carnivorous;
     public CarnivorousFlowerBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, CarnivorousFlower _flower) : base(_enemyBase, _stateMachine, _animBollName)
     {
         this.flower = _flower;
@@ -18,14 +17,40 @@ public class CarnivorousFlowerBattleState : EnemyState
         player = GameObject.Find("Player").transform;
         Debug.Log("Im in battle state");
     }
+    public override void Update()
+    {
+        base.Update();
+
+        if (flower.IsPlayerDetectedFL())
+        {
+            stateTimer = flower.BattleTime;
+
+            if (flower.IsPlayerDetectedFL().distance < flower.attackDistance)
+            {
+                if (CanAttack())
+                    stateMachine.ChangeState(flower.attackState);
+            }
+        }
+        else
+        {
+            if (stateTimer < 0 || Vector2.Distance(player.transform.position, flower.transform.position) > 7)
+                stateMachine.ChangeState(flower.idleState);
+        }
+    }
 
     public override void Exit()
     {
         base.Exit();
     }
-
-    public override void Update()
+    private bool CanAttack()
     {
-        base.Update();
+        if (Time.time >= flower.lastTimeAttacked + flower.attackCooldown)
+        {
+            flower.lastTimeAttacked = Time.time;
+            return true;
+        }
+
+        return false;
     }
+
 }
