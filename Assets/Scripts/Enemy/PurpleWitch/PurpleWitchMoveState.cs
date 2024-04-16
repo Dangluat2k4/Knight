@@ -2,24 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PurpleWitchMoveState : EnemyState
+public class PurpleWitchMoveState : PurpleWitchGroundState
 {
-    protected PurpleWitch purple;
-
-    protected Transform player;
-    // can khoi tao j them lien quan den Move thì ở đây
-    public PurpleWitchMoveState(PurpleWitch _purpleWitch, EnemyStateMachine _stateMachine, string _animBoolName, PurpleWitch _purple) : base(_purpleWitch, _stateMachine, _animBoolName)
+    public PurpleWitchMoveState(PurpleWitch _purpleWitch, EnemyStateMachine _stateMachine, string _animBoolName, PurpleWitch purpleWitch) : base(_purpleWitch, _stateMachine, _animBoolName, purpleWitch)
     {
-        this.purple = _purple;
     }
 
     public override void Enter()
     {
         base.Enter();
         // khi khai báo song phải khởi tạo ở đây
-        purple.SetVelocity(purple.moveSpeed * purple.facingDir, rb.velocity.y);
-        // rb.velocity = new Vector2(purpleWitch.moveSpeed, 0);
-        player = GameObject.Find("Player").transform;
+        purpleWitch.SetVelocity(purpleWitch.moveSpeed * purpleWitch.facingDir, rb.velocity.y);
     }
 
     public override void Exit()
@@ -30,21 +23,18 @@ public class PurpleWitchMoveState : EnemyState
     public override void Update()
     {
         base.Update();
-        var purpleWitchPos = purple.transform.position.x;
-        if (purple.IsGroundDetected() || Vector2.Distance(purple.transform.position, player.position) < 10)
+        var purpleWitchPos = purpleWitch.transform.position.x;
+
+        if (purpleWitchPos > purpleWitch.right)
         {
-            stateMachine.ChangeState(purple.battleState);
-        }
-        if (purpleWitchPos > purple.right)
-        {
-          //  Debug.Log("max");
-            purple.SetVelocity(-purple.moveSpeed, rb.velocity.y);
+            //  Debug.Log("max");
+            purpleWitch.SetVelocity(-purpleWitch.moveSpeed, rb.velocity.y);
 
         }
-        else if (purpleWitchPos < purple.left)
+        else if (purpleWitchPos < purpleWitch.left)
         {
 
-            purple.SetVelocity( purple.moveSpeed, rb.velocity.y);
+            purpleWitch.SetVelocity(purpleWitch.moveSpeed, rb.velocity.y);
 
 
         }

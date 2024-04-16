@@ -9,6 +9,9 @@ public class WraithBattleState : EnemyState
     // khai bao enemy
     private Wraith_Enemy wraith;
     private int moveDir;
+
+  
+  
     public WraithBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, Wraith_Enemy _wraith) : base(_enemyBase, _stateMachine, _animBollName)
     {
         this.wraith = _wraith;
@@ -19,7 +22,7 @@ public class WraithBattleState : EnemyState
         base.Enter();
         // tim gameobject co ten la Player trong unity
         player = GameObject.Find("Player").transform;
-        Debug.Log("Im in battle state");
+        Debug.Log("wraith see player");
     }
 
     public override void Exit()
@@ -37,7 +40,7 @@ public class WraithBattleState : EnemyState
             if (wraith.IsPlayerDetected().distance < wraith.attackDistance)
             {
                 if (CanAttack())
-                    stateMachine.ChangeState(wraith.attackStateImmirtal);
+                    stateMachine.ChangeState(wraith.attackStateMini);
             }
         }
         else
