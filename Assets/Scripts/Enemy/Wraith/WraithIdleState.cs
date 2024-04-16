@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WraithIdleState : EnemyState
+public class WraithIdleState : WraithGroundState
 {
-    private Wraith_Enemy wraith;
-    public WraithIdleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, Wraith_Enemy _wraith) : base(_enemyBase, _stateMachine, _animBollName)
+    public WraithIdleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, Wraith_Enemy _wraith) : base(_enemyBase, _stateMachine, _animBollName, _wraith)
     {
-        wraith = _wraith;
+        this.wraith = _wraith;
     }
 
     public override void Enter()

@@ -6,12 +6,15 @@ public class Wraith_Enemy : Enemy
 {
     public float left, right;
     public float speed = 1;
+    public GameObject bulletMini;
+    public Transform MiniPos;
 
     #region State
     public WraithIdleState idleState { get; private set; }
     public WraithMoveState moveState { get; private set; }
     public WraithBattleState battleState { get; private set; }
     public WraithimmirtalWithPlayer attackStateImmirtal { get; private set; }
+    public WraithAttackState attackStateMini { get; private set; }
     #endregion
     protected override void Awake()
     {
@@ -20,9 +23,12 @@ public class Wraith_Enemy : Enemy
 
         idleState = new WraithIdleState(this, stateMachine, "Idle", this); 
         moveState = new WraithMoveState(this, stateMachine, "Move", this);
-        battleState = new WraithBattleState(this, stateMachine, "Move", this);
+        battleState = new WraithBattleState(this, stateMachine, "Idle", this);
         attackStateImmirtal = new WraithimmirtalWithPlayer(this, stateMachine, "IsImmune", this);
+        attackStateMini = new WraithAttackState(this, stateMachine, "IsAttack", this);
     }
+
+    public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
     protected override void Start()
     {
