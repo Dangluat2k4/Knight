@@ -22,6 +22,8 @@ public class Enemy : Entity
     public float attackDistance;
     // thoi gian hoi chieu
     public float attackCooldown;
+
+
     [HideInInspector] public float lastTimeAttacked;
     public EnemyStateMachine stateMachine { get; private set; }
 

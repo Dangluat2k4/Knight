@@ -1,12 +1,12 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PurpleWitchBattleState : EnemyState
 {
     private PurpleWitch purpleWitch;
-    private int moveDir;
     private Transform player;
+    private int moveDir;
     public PurpleWitchBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, PurpleWitch _purpleWitch) : base(_enemyBase, _stateMachine, _animBollName)
     {
         this.purpleWitch = _purpleWitch;
@@ -19,15 +19,14 @@ public class PurpleWitchBattleState : EnemyState
       //  Debug.Log("Im in battle state");
     }
 
-    public override void Exit()
-    {
-        base.Exit();
-    }
 
     public override void Update()
     {
         base.Update();
-        if(purpleWitch.IsPlayerDetected())
+
+        Vector2 direction = (player.position - purpleWitch.transform.position).normalized;
+
+        if (purpleWitch.IsPlayerDetected())
         {
             stateTimer = purpleWitch.BattleTime;
             if(purpleWitch.IsPlayerDetected().distance < purpleWitch.attackDistance )
@@ -38,16 +37,21 @@ public class PurpleWitchBattleState : EnemyState
         }
         else
         {
-            if (stateTimer < 0 || Vector2.Distance(player.transform.position, purpleWitch.transform.position) > 10)
+            if (stateTimer < 0 || Vector2.Distance(player.transform.position, purpleWitch.transform.position) > 7)
                 stateMachine.ChangeState(purpleWitch.idleState);
         }
 
-        if (player.position.x > purpleWitch.transform.position.x)
+        if (direction.x > 0)
             moveDir = 1;
-        else if (player.position.x < purpleWitch.transform.position.x)
+        else if (direction.x < 0)
             moveDir = -1;
 
-        purpleWitch.SetVelocity(purpleWitch.moveSpeed * moveDir, rb.velocity.y);
+        purpleWitch.SetVelocity(purpleWitch.moveSpeed * direction.x, purpleWitch.moveSpeed * direction.y);
+
+    }
+    public override void Exit()
+    {
+        base.Exit();
     }
 
     private bool CanAttack()
