@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PurpleWitchIdleState : EnemyState
+public class PurpleWitchIdleState : PurpleWitchGroundState
 {
-    protected PurpleWitch purple;
-    public PurpleWitchIdleState(PurpleWitch _purpleWitch, EnemyStateMachine _stateMachine, string _animBoolName, PurpleWitch _purple) : base(_purpleWitch, _stateMachine, _animBoolName)
+    public PurpleWitchIdleState(PurpleWitch _purpleWitch, EnemyStateMachine _stateMachine, string _animBoolName, PurpleWitch purpleWitch) : base(_purpleWitch, _stateMachine, _animBoolName, purpleWitch)
     {
-        this.purple = _purple;
     }
 
     public override void Enter()
     {
         base.Enter();
-        stateTimer = purple.idleTime;
+        stateTimer = purpleWitch.idleTime;
     }
 
     public override void Exit()
@@ -26,7 +24,7 @@ public class PurpleWitchIdleState : EnemyState
         base.Update();
         if (stateTimer < 0)
         {
-            stateMachine.ChangeState(purple.moveState);
+            stateMachine.ChangeState(purpleWitch.moveState);
         }
     }
 }

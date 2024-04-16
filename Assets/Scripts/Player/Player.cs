@@ -35,6 +35,7 @@ public class Player :Entity
     public PlayerDashState dashState { get; private set; }
     public PlayerPrimaryAttack primaryAttack { get; private set; }
     public PlayerLightBallState lightBallState { get; private set; }
+    public PlayerDeathState deathState { get; private set; }
 
     protected override void Awake()
     {
@@ -52,6 +53,7 @@ public class Player :Entity
 
         primaryAttack = new PlayerPrimaryAttack(this, stateMachine, "Attack");
         lightBallState = new PlayerLightBallState(this, stateMachine, "LightBall");
+        deathState = new PlayerDeathState(this, stateMachine, "Die");
     }
 
     protected override void Start()
@@ -92,5 +94,11 @@ public class Player :Entity
 
             stateMachine.ChangeState(dashState);
         }
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        stateMachine.ChangeState(deathState);
     }
 }

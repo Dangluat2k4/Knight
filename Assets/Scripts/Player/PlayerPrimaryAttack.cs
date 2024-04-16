@@ -37,7 +37,7 @@ public class PlayerPrimaryAttack : PlayerState
         player.StartCoroutine("BusyFor", .15f);
         comboCounter++;
         lastTimeAttacked = Time.time;
-        Debug.Log(lastTimeAttacked);
+     //   Debug.Log(lastTimeAttacked);
     }
     //update 
     public override void Update()

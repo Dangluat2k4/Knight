@@ -20,7 +20,7 @@ public class GolemBattleState : EnemyState
         base.Enter();
         // tim gameobject co ten la Player trong unity
         player = GameObject.Find("Player").transform;
-        Debug.Log("Im in battle state");
+       // Debug.Log("Im in battle state");
     }
     public override void Update()
     {
@@ -41,10 +41,6 @@ public class GolemBattleState : EnemyState
             if (stateTimer < 0 || Vector2.Distance(player.transform.position, golem.transform.position) > 7)
                 stateMachine.ChangeState(golem.idleState);
         }
-
-
-
-
 
 
         if (player.position.x > golem.transform.position.x)
