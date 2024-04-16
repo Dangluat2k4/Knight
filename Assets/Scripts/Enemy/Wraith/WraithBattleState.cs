@@ -9,6 +9,7 @@ public class WraithBattleState : EnemyState
     // khai bao enemy
     private Wraith_Enemy wraith;
     private int moveDir;
+
   
   
     public WraithBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, Wraith_Enemy _wraith) : base(_enemyBase, _stateMachine, _animBollName)
