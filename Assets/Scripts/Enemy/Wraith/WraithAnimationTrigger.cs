@@ -10,4 +10,9 @@ public class WraithAnimationTrigger : MonoBehaviour
     {
         wraith.AnimationFinishTrigger();
     }
+    private void CreateFire()
+    {
+        Instantiate(wraith.bulletMini, wraith.MiniPos.position, transform.rotation);
+        wraith.AnimationFinishTrigger();
+    }
 }

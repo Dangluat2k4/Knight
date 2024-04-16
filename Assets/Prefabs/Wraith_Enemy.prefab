@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5780764759330608086}
   - component: {fileID: 6146196279258934723}
   - component: {fileID: 2457639625523059777}
+  - component: {fileID: 7348331646559941195}
   m_Layer: 0
   m_Name: Animator
   m_TagString: Untagged
@@ -109,6 +110,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7348331646559941195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242596976124672763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e121c45aef87bdb49855c2099f910177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2991217031688284823
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +134,6 @@ GameObject:
   - component: {fileID: 6635642790907638961}
   - component: {fileID: 4565255085713191389}
   - component: {fileID: 7263057759453817689}
-  - component: {fileID: 6955001956866347194}
   m_Layer: 0
   m_Name: Wraith_Enemy
   m_TagString: Untagged
@@ -186,6 +198,8 @@ MonoBehaviour:
   left: 6
   right: 10
   speed: 1
+  bulletMini: {fileID: 0}
+  MiniPos: {fileID: 0}
 --- !u!50 &4565255085713191389
 Rigidbody2D:
   serializedVersion: 4
@@ -250,19 +264,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.055253506, y: -0.069067836}
   m_Size: {x: 1.7155981, y: 2.68526}
   m_Direction: 0
---- !u!114 &6955001956866347194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2991217031688284823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51d2ff662f4ac764ba267e12d3e8b943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  immuneDuration: 10
 --- !u!1 &7026608585433218461
 GameObject:
   m_ObjectHideFlags: 0

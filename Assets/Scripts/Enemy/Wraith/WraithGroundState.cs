@@ -9,8 +9,10 @@ public class WraithGroundState : EnemyState
 
     public WraithGroundState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBollName, Wraith_Enemy _wraith) : base(_enemyBase, _stateMachine, _animBollName)
     {
-        wraith = _wraith;
+        this.wraith = _wraith;
     }
+
+    
 
     public override void Enter()
     {
