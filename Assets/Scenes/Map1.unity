@@ -1580,6 +1580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Village Props - Chest Silver
       objectReference: {fileID: 0}
+    - target: {fileID: 6930122694965717508, guid: 7f2681b23c23afc4fbb43c6dca9f41f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6930122694965717509, guid: 7f2681b23c23afc4fbb43c6dca9f41f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 89.32562
@@ -1633,9 +1637,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1773417248}
     m_Modifications:
+    - target: {fileID: 1671459498715919559, guid: f98d0f39fcc67a34f844abd8a50f2c03, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173076518257558991, guid: f98d0f39fcc67a34f844abd8a50f2c03, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 4153037778868685726, guid: db10ecec868f5104cafb05beaf9fa3b0, type: 3}
+    - target: {fileID: 3173076518257558991, guid: f98d0f39fcc67a34f844abd8a50f2c03, type: 3}
+      propertyPath: explosionPrefab
+      value: 
+      objectReference: {fileID: 99081068477203062, guid: 1739a68cda7f70f40ad2d06295517ff3, type: 3}
     - target: {fileID: 6930122694965717508, guid: f98d0f39fcc67a34f844abd8a50f2c03, type: 3}
       propertyPath: m_Name
       value: PF Village Props - Chest Wooden
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930122694965717508, guid: f98d0f39fcc67a34f844abd8a50f2c03, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6930122694965717509, guid: f98d0f39fcc67a34f844abd8a50f2c03, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2483,7 +2503,7 @@ Transform:
   m_GameObject: {fileID: 338867913}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.910866, y: -6.661357, z: -9.908299}
+  m_LocalPosition: {x: 105.08084, y: -8.210076, z: -9.908299}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3013,6 +3033,11 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  attackCheck: {fileID: 0}
+  attackRange: 0
+  whatIsChest:
+    serializedVersion: 2
+    m_Bits: 0
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
@@ -3267,6 +3292,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 050d9e84d8de61d41ac16ebab39e64a2, type: 3}
+--- !u!1 &477665301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477665302}
+  m_Layer: 9
+  m_Name: attackChest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &477665302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477665301}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9, y: 1.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5738907471093701826}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &484491792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3910,6 +3966,11 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  attackCheck: {fileID: 0}
+  attackRange: 0
+  whatIsChest:
+    serializedVersion: 2
+    m_Bits: 0
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
@@ -5026,6 +5087,10 @@ PrefabInstance:
     - target: {fileID: 6930122694965717508, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
       propertyPath: m_Name
       value: PF Village Props - Chest Golden
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930122694965717508, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6930122694965717509, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8326,7 +8391,7 @@ Transform:
   m_GameObject: {fileID: 1211555479}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.910866, y: -6.661357, z: -9.908299}
+  m_LocalPosition: {x: 105.08084, y: -8.210076, z: -9.908299}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50693,6 +50758,11 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  attackCheck: {fileID: 0}
+  attackRange: 0
+  whatIsChest:
+    serializedVersion: 2
+    m_Bits: 0
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
@@ -52116,7 +52186,7 @@ GameObject:
   - component: {fileID: 9007766546505890664}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53024,6 +53094,11 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
+  attackCheck: {fileID: 0}
+  attackRange: 0
+  whatIsChest:
+    serializedVersion: 2
+    m_Bits: 0
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
@@ -53331,7 +53406,7 @@ Transform:
   m_GameObject: {fileID: 3313073863497455090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60.739975, y: 1.948719, z: 0}
+  m_LocalPosition: {x: 36.43, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -53341,6 +53416,7 @@ Transform:
   - {fileID: 1992671787153139324}
   - {fileID: 7053068154770473977}
   - {fileID: 6375086891857634524}
+  - {fileID: 477665302}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5745402248999698032
@@ -53471,6 +53547,11 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  attackCheck: {fileID: 0}
+  attackRange: 0
+  whatIsChest:
+    serializedVersion: 2
+    m_Bits: 0
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
@@ -54006,6 +54087,11 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  attackCheck: {fileID: 0}
+  attackRange: 0
+  whatIsChest:
+    serializedVersion: 2
+    m_Bits: 0
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
@@ -54191,6 +54277,11 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  attackCheck: {fileID: 477665302}
+  attackRange: 3.65
+  whatIsChest:
+    serializedVersion: 2
+    m_Bits: 1024
   attackMovement:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
@@ -54280,6 +54371,11 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  attackCheck: {fileID: 0}
+  attackRange: 0
+  whatIsChest:
+    serializedVersion: 2
+    m_Bits: 0
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 0
@@ -54295,6 +54391,8 @@ MonoBehaviour:
   left: -1
   right: 12
   speed: 1
+  bulletMini: {fileID: 0}
+  MiniPos: {fileID: 0}
 --- !u!1 &8182935368097336842
 GameObject:
   m_ObjectHideFlags: 0
@@ -54501,6 +54599,11 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  attackCheck: {fileID: 0}
+  attackRange: 0
+  whatIsChest:
+    serializedVersion: 2
+    m_Bits: 0
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512

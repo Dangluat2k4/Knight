@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +15,7 @@ public class PlayerStats : CharacterStats
         base.TakeDamage(_damage);
         player.Damage();
     }
+    
     public override void Die()
     {
         base.Die();

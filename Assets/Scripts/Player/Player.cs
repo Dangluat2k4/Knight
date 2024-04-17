@@ -1,9 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player :Entity
 {
+    private CharacterStats characterStats;
+
     [Header("Attack details")]
     public Vector2[] attackMovement;
     public bool isBusy { get; private set; }
@@ -60,6 +62,8 @@ public class Player :Entity
     {
         base.Start();
         stateMachine.Initialize(idleState);
+        characterStats = GetComponent<CharacterStats>();
+
     }
 
     protected override void Update()
@@ -67,6 +71,12 @@ public class Player :Entity
         base.Update();
         stateMachine.currentState.Update();
         CheckForDashInput();
+    }
+    // Phương thức này được gọi khi người chơi chạm vào item quả táo
+    public void OnAppleCollected()
+    {
+        // Hồi 10 HP cho người chơi
+        characterStats.Heal(10);
     }
     public IEnumerator BusyFor(float _seconds)
     {

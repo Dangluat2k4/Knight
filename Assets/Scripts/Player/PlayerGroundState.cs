@@ -26,6 +26,7 @@ public class PlayerGroundState : PlayerState
         if (Input.GetKeyDown(KeyCode.J))
         {
             stateMachine.ChangeState(player.primaryAttack);
+            player.Attack();
         //    Debug.Log("taans cong");
 
         }

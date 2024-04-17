@@ -19,6 +19,7 @@ public class CharacterStats : MonoBehaviour
         // khoi tao HP t
         currentHealth = maxHealth;
     }
+    
 
     // tạo hàm tính dam gây ra và HP
     public virtual void TakeDamage(int _damage)
@@ -35,5 +36,9 @@ public class CharacterStats : MonoBehaviour
     public virtual void Die()
     {
    //     throw new NotImplementedException();
+    }
+    public void Heal(int amount)
+    {
+        currentHealth = Mathf.Min(maxHealth, currentHealth + amount);
     }
 }

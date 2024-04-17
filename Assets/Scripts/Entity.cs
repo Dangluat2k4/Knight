@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using Cainos.PixelArtPlatformer_VillageProps;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+    private Chest chest;
     // components
     // dieu khien animation cua nhan vat
     public Animator anim { get; private set; }
@@ -41,6 +43,10 @@ public class Entity : MonoBehaviour
     [SerializeField] protected LayerMask whatIsGround;
     // loai mat dat
 
+    [Header("Attack")]
+    [SerializeField] protected Transform attackCheck;
+    [SerializeField] protected float attackRange;
+    [SerializeField] protected LayerMask whatIsChest;
 
     // trai thai lat mat
     public int facingDir { get; private set; } = 1;
@@ -93,6 +99,11 @@ public class Entity : MonoBehaviour
         Gizmos.DrawWireSphere(attackCkeck.position, attackCkeckRadius); 
     }
 
+    protected virtual void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackCheck.position, attackRange);
+    }
 
     // xet vat ly
     public void SetZeroVelocity()
@@ -151,4 +162,33 @@ public class Entity : MonoBehaviour
     {
 
     }
+    public void Attack()
+    {
+        // Kiểm tra xem attackCheck đã được gán chưa
+        if (attackCheck == null)
+        {
+            Debug.LogWarning("Attack check transform is not assigned!");
+            return;
+        }
+
+        // Kiểm tra xem có hòm rương trong phạm vi tấn công không
+        Collider2D[] hitChests = Physics2D.OverlapCircleAll(attackCheck.position, attackRange, whatIsChest);
+
+        // Lặp qua tất cả các hòm rương va chạm
+        foreach (Collider2D chestCollider in hitChests)
+        {
+            // Lấy thành phần Chest từ hòm rương
+             chest = chestCollider.GetComponent<Chest>();
+
+            // Kiểm tra xem chest có tồn tại và đang hoạt động không
+            if (chest != null && chest.isActiveAndEnabled)
+            {
+                // Hủy bỏ hòm rương
+                chest.DestroyChest();
+            }
+        }
+    }
+
+
+
 }

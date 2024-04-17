@@ -1,7 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cainos.LucidEditor;
+
 
 namespace Cainos.PixelArtPlatformer_VillageProps
 {
@@ -9,6 +10,8 @@ namespace Cainos.PixelArtPlatformer_VillageProps
     {
         [FoldoutGroup("Reference")]
         public Animator animator;
+        public GameObject explosionPrefab; // Prefab của hiệu ứng vụ nổ
+        public GameObject applePrefab;
 
         [FoldoutGroup("Runtime"), ShowInInspector, DisableInEditMode]
         public bool IsOpened
@@ -33,5 +36,16 @@ namespace Cainos.PixelArtPlatformer_VillageProps
         {
             IsOpened = false;
         }
+        public void DestroyChest()
+        {
+            // Tạo ra hiệu ứng vụ nổ
+            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            // Hủy bỏ hòm rương sau một khoảng thời gian
+            Destroy(gameObject, 0.75f);
+            Destroy(explosion, 1.2f);
+
+            // Gọi coroutine để đợi cho vụ nổ hoàn thành trước khi tạo ra item quả táo
+            
+        }        
     }
 }
