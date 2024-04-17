@@ -7,6 +7,8 @@ public class PurpleWitch : Enemy
     // Start is called before the first frame update
     public float left, right;
     public float speed = 1;
+    public GameObject ClonePW;
+    public Transform PlayerPos;
 
     // Remove the redeclaration of stateMachine here
 

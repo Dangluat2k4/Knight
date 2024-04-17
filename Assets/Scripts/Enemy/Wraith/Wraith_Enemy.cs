@@ -6,7 +6,7 @@ public class Wraith_Enemy : Enemy
 {
     public float left, right;
     public float speed = 1;
-    public GameObject bulletMini;
+    public GameObject WraithMini;
     public Transform MiniPos;
 
     #region State
@@ -23,7 +23,7 @@ public class Wraith_Enemy : Enemy
 
         idleState = new WraithIdleState(this, stateMachine, "Idle", this); 
         moveState = new WraithMoveState(this, stateMachine, "Move", this);
-        battleState = new WraithBattleState(this, stateMachine, "Idle", this);
+        battleState = new WraithBattleState(this, stateMachine, "IsAttack", this);
         attackStateImmirtal = new WraithimmirtalWithPlayer(this, stateMachine, "IsImmune", this);
         attackStateMini = new WraithAttackState(this, stateMachine, "IsAttack", this);
     }
