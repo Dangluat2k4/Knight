@@ -36,6 +36,7 @@ public class FireShot : MonoBehaviour
         if (collision.gameObject.tag =="Enemy"){
             Debug.Log("va cham");
         }
+       
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -48,5 +49,6 @@ public class FireShot : MonoBehaviour
             }
             Destroy(gameObject); // Hủy đạn sau khi va chạm với Enemy
         }
+      
     }
 }
