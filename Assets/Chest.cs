@@ -22,4 +22,13 @@ public class Chest : MonoBehaviour
         // Hủy bỏ hiệu ứng vụ nổ sau một khoảng thời gian
         Destroy(explosion, 1f);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("chess");
+            DestroyChest();
+        }
+
+    }
 }
