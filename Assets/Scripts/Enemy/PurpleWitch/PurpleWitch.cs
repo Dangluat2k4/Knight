@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
 
 public class PurpleWitch : Enemy
@@ -35,5 +36,10 @@ public class PurpleWitch : Enemy
     protected override void Update()
     {
         base.Update();
+    }
+    public override void Die()
+    {
+        base.Die();
+        Destroy(gameObject);
     }
 }
