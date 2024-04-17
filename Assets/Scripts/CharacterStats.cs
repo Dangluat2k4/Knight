@@ -30,6 +30,13 @@ public class CharacterStats : MonoBehaviour
             Debug.Log("Die");
         }
     }
+    public virtual void healing(int _hp)
+    {
+        currentHealth += _hp;
+       
+            Debug.Log("hồi hp");
+        
+    }
 
     // tạo hàm sử lý  su kien khi hết HP
     public virtual void Die()
