@@ -18,6 +18,10 @@ public class WraithMiniBattleState : EnemyState
         player = GameObject.Find("Player").transform;
         Debug.Log("Im in battle state");
     }
+    public override void Exit()
+    {
+        base.Exit();
+    }
 
 
     public override void Update()
@@ -36,25 +40,24 @@ public class WraithMiniBattleState : EnemyState
                 if (CanAttack())
                     stateMachine.ChangeState(wraithMini.wraithMiniAttack);
             }
-        }   
-        else
-        {
-            if (stateTimer < 0 || Vector2.Distance(player.transform.position, wraithMini.transform.position) > 7)
-                stateMachine.ChangeState(wraithMini.wraithMiniIdle);
         }
 
+        // Độ cao mong muốn của đối thủ so với độ cao của người chơi
+        float desiredHeight = player.position.y + 1.5f; // Độ cao mong muốn là độ cao của người chơi cộng thêm 2f
 
-        if (direction.x > 0)
+        // Điều chỉnh độ cao của đối thủ
+        Vector3 newPosition = wraithMini.transform.position;
+        newPosition.y = Mathf.Max(newPosition.y, desiredHeight); // Chọn giá trị cao nhất giữa độ cao hiện tại và độ cao mong muốn
+        wraithMini.transform.position = newPosition;
+
+        if (direction.x > 0) 
             moveDir = 1;
         else if (direction.x < 0)
             moveDir = -1;
 
         wraithMini.SetVelocity(wraithMini.moveSpeed * direction.x, wraithMini.moveSpeed * direction.y);
     }
-    public override void Exit()
-    {
-        base.Exit();
-    }
+
     private bool CanAttack()
     {
         if (Time.time >=wraithMini.lastTimeAttacked + wraithMini.attackCooldown)
