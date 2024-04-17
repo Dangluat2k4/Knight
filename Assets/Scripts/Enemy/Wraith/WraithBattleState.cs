@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,14 +33,17 @@ public class WraithBattleState : EnemyState
     public override void Update()
     {
         base.Update();
-        if (wraith.IsPlayerDetected())
+        Vector2 direction = (player.position - wraith.transform.position).normalized;
+        if (wraith.IsPlayerDetectedWM())
         {
             stateTimer = wraith.BattleTime;
 
-            if (wraith.IsPlayerDetected().distance < wraith.attackDistance)
+            if (wraith.IsPlayerDetectedWM().distance < wraith.attackDistance)
             {
                 if (CanAttack())
+                {
                     stateMachine.ChangeState(wraith.attackStateMini);
+                }
             }
         }
         else
@@ -49,12 +52,18 @@ public class WraithBattleState : EnemyState
                 stateMachine.ChangeState(wraith.idleState);
         }
 
-        if (player.position.x > wraith.transform.position.x)
+        float desiredHeight = player.position.y + 1.5f;
+
+        Vector3 newPosition = wraith.transform.position;
+        newPosition.y = Mathf.Max(newPosition.y, desiredHeight); // Chọn giá trị cao nhất giữa độ cao hiện tại và độ cao mong muốn
+        wraith.transform.position = newPosition;
+
+        if (direction.x > 0)
             moveDir = 1;
-        else if (player.position.x < wraith.transform.position.x)
+        else if (direction.x < 0)
             moveDir = -1;
 
-        wraith.SetVelocity(wraith.moveSpeed * moveDir, rb.velocity.y);
+        wraith.SetVelocity(wraith.moveSpeed * direction.x, wraith.moveSpeed * direction.y);
     }
     private bool CanAttack()
     {

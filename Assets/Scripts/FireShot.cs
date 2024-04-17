@@ -29,5 +29,24 @@ public class FireShot : MonoBehaviour
 
         // Thiết lập vận tốc của đạn theo hướng mặt của nhân vật
         rb.velocity = direction * -speedBullet;
+    
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag =="Enemy"){
+            Debug.Log("va cham");
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            CharacterStats enemyStats = collision.gameObject.GetComponent<CharacterStats>();
+            if (enemyStats != null)
+            {
+                enemyStats.TakeDamage(50); // Giảm 1 HP khi đạn va chạm với Enemy
+            }
+            Destroy(gameObject); // Hủy đạn sau khi va chạm với Enemy
+        }
     }
 }
