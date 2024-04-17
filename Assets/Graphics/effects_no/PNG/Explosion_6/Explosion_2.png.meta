@@ -24,7 +24,7 @@ TextureImporter:
       213: -3583748757885567143
     second: Explosion_2_6
   externalObjects: {}
-  serializedVersion: 13
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -116,6 +116,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -287,7 +300,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Explosion_2_0: -8188707936505374878
+      Explosion_2_1: 1440841337685639799
+      Explosion_2_2: 2946982832065051438
+      Explosion_2_3: -3838429317017940854
+      Explosion_2_4: 7693506468898372418
+      Explosion_2_5: 4156199104907139565
+      Explosion_2_6: -3583748757885567143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
