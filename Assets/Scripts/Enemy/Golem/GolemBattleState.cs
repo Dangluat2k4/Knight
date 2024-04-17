@@ -33,7 +33,9 @@ public class GolemBattleState : EnemyState
             if (golem.IsPlayerDetected().distance < golem.attackDistance)
             {
                 if (CanAttack())
+                {
                     stateMachine.ChangeState(golem.attackState);
+                }
             }
         }
         else
@@ -56,14 +58,13 @@ public class GolemBattleState : EnemyState
         base.Exit();
     }
 
-    private bool CanAttack()
+    public bool CanAttack()
     {
         if (Time.time >= golem.lastTimeAttacked + golem.attackCooldown)
         {
             golem.lastTimeAttacked = Time.time;
             return true;
         }
-
         return false;
     }
 }

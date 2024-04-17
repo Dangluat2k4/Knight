@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,9 +10,14 @@ public class WraithAnimationTrigger : MonoBehaviour
     {
         wraith.AnimationFinishTrigger();
     }
-    private void CreateFire()
+    private void CreateWraithMini()
     {
-        Instantiate(wraith.bulletMini, wraith.MiniPos.position, transform.rotation);
+        for(int i = 0;i<5;i++)
+        {
+            Vector3 randomOffset = Random.insideUnitSphere * 2f; // Tạo một vị trí ngẫu nhiên trong bán kính 2 đơn vị
+            Vector3 spawnPos = wraith.MiniPos.position + randomOffset;
+            Instantiate(wraith.WraithMini,spawnPos, transform.rotation);
+        }
         wraith.AnimationFinishTrigger();
     }
 }
