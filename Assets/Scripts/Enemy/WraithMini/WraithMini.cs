@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using Unity.VisualScripting;
 using UnityEditorInternal;
 using UnityEngine;
@@ -33,5 +34,10 @@ public class WraithMini : Enemy
     protected override void Update()
     {
         base.Update();
+    }
+    public override void Die()
+    {
+        base.Die();
+        Destroy(gameObject);
     }
 }
