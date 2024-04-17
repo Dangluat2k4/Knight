@@ -6,6 +6,8 @@ public class Entity : MonoBehaviour
 {
     // components
     // dieu khien animation cua nhan vat
+    private Chest chest;
+
     public Animator anim { get; private set; }
     // dieu hien vat ly
     public Rigidbody2D rb { get; private set; }
@@ -40,6 +42,10 @@ public class Entity : MonoBehaviour
     // wallCheckDistance khoang cach giua tuong
     [SerializeField] protected LayerMask whatIsGround;
     // loai mat dat
+    [Header("Attack")]
+    [SerializeField] protected Transform attackCheck;
+    [SerializeField] protected float attackRange;
+    [SerializeField] protected LayerMask whatIsChest;
 
 
     // trai thai lat mat
@@ -91,6 +97,11 @@ public class Entity : MonoBehaviour
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
         // thuc hien tan cong
         Gizmos.DrawWireSphere(attackCkeck.position, attackCkeckRadius); 
+    }
+    protected virtual void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackCheck.position, attackRange);
     }
 
 
@@ -150,5 +161,31 @@ public class Entity : MonoBehaviour
     public virtual void Die()
     {
 
+    }
+    public void Attack()
+    {
+        // Kiểm tra xem attackCheck đã được gán chưa
+        if (attackCheck == null)
+        {
+            Debug.LogWarning("Attack check transform is not assigned!");
+            return;
+        }
+
+        // Kiểm tra xem có hòm rương trong phạm vi tấn công không
+        Collider2D[] hitChests = Physics2D.OverlapCircleAll(attackCheck.position, attackRange, whatIsChest);
+
+        // Lặp qua tất cả các hòm rương va chạm
+        foreach (Collider2D chestCollider in hitChests)
+        {
+            // Lấy thành phần Chest từ hòm rương
+            chest = chestCollider.GetComponent<Chest>();
+
+            // Kiểm tra xem chest có tồn tại và đang hoạt động không
+            if (chest != null && chest.isActiveAndEnabled)
+            {
+                // Hủy bỏ hòm rương
+                chest.DestroyChest();
+            }
+        }
     }
 }
