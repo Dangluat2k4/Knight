@@ -42,6 +42,6 @@ public class Golem : Enemy
     {
         base.Die();
         stateMachine.ChangeState(deadState);
-        Destroy(gameObject, .4f);
+        Destroy(gameObject);
     }
 }

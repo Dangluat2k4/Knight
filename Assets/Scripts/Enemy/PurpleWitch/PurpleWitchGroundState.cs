@@ -25,7 +25,6 @@ public class PurpleWitchGroundState : EnemyState
     public override void Update()
     {
         base.Update();
-        base.Update();
         if (purpleWitch.IsPlayerDetected() || Vector2.Distance(purpleWitch.transform.position, player.position) < 10)
         {
             stateMachine.ChangeState(purpleWitch.battleState);

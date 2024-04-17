@@ -16,7 +16,7 @@ public class WraithAnimationTrigger : MonoBehaviour
         {
             Vector3 randomOffset = Random.insideUnitSphere * 2f; // Tạo một vị trí ngẫu nhiên trong bán kính 2 đơn vị
             Vector3 spawnPos = wraith.MiniPos.position + randomOffset;
-            Instantiate(wraith.WraithMini,spawnPos, transform.rotation);
+            Instantiate(wraith.WraithMini,spawnPos, Quaternion.identity);
         }
         wraith.AnimationFinishTrigger();
     }

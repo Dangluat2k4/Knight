@@ -22,23 +22,17 @@ public class WraithBattleState : EnemyState
         base.Enter();
         // tim gameobject co ten la Player trong unity
         player = GameObject.Find("Player").transform;
-        Debug.Log("wraith see player");
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
     }
 
     public override void Update()
     {
         base.Update();
         Vector2 direction = (player.position - wraith.transform.position).normalized;
-        if (wraith.IsPlayerDetectedWM())
+        if (wraith.IsPlayerDetected())
         {
             stateTimer = wraith.BattleTime;
 
-            if (wraith.IsPlayerDetectedWM().distance < wraith.attackDistance)
+            if (wraith.IsPlayerDetected().distance < wraith.attackDistance)
             {
                 if (CanAttack())
                 {
@@ -64,6 +58,11 @@ public class WraithBattleState : EnemyState
             moveDir = -1;
 
         wraith.SetVelocity(wraith.moveSpeed * direction.x, wraith.moveSpeed * direction.y);
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
     }
     private bool CanAttack()
     {

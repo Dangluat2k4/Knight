@@ -29,7 +29,7 @@ public class WraithGroundState : EnemyState
     public override void Update()
     {
         base.Update();
-        if (wraith.IsPlayerDetectedWM() || Vector2.Distance(wraith.transform.position, player.position) < 20)
+        if (wraith.IsPlayerDetected() || Vector2.Distance(wraith.transform.position, player.position) < 10)
         {
             stateMachine.ChangeState(wraith.battleState);
         }

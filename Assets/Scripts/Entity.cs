@@ -42,9 +42,6 @@ public class Entity : MonoBehaviour
     // wallCheckDistance khoang cach giua tuong
     [SerializeField] protected LayerMask whatIsGround;
     // loai mat dat
-    [Header("Attack")]
-    [SerializeField] protected Transform attackCheck;
-    [SerializeField] protected LayerMask whatIsChest;
 
 
     // trai thai lat mat
