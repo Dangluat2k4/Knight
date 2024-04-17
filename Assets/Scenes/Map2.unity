@@ -4335,6 +4335,10 @@ PrefabInstance:
       propertyPath: right
       value: 97.27
       objectReference: {fileID: 0}
+    - target: {fileID: 5191717004207798084, guid: 1626a7a3f018845419a4476638df6690, type: 3}
+      propertyPath: PlayerPos
+      value: 
+      objectReference: {fileID: 1658838097}
     - target: {fileID: 8614585620336488176, guid: 1626a7a3f018845419a4476638df6690, type: 3}
       propertyPath: m_Name
       value: 'PurpleWitch '
@@ -10501,6 +10505,10 @@ PrefabInstance:
       propertyPath: right
       value: -10.92
       objectReference: {fileID: 0}
+    - target: {fileID: 5191717004207798084, guid: 1626a7a3f018845419a4476638df6690, type: 3}
+      propertyPath: PlayerPos
+      value: 
+      objectReference: {fileID: 1658838097}
     - target: {fileID: 8614585620336488176, guid: 1626a7a3f018845419a4476638df6690, type: 3}
       propertyPath: m_Name
       value: 'PurpleWitch '
@@ -14638,6 +14646,10 @@ PrefabInstance:
       propertyPath: right
       value: 105.0075
       objectReference: {fileID: 0}
+    - target: {fileID: 5191717004207798084, guid: 1626a7a3f018845419a4476638df6690, type: 3}
+      propertyPath: PlayerPos
+      value: 
+      objectReference: {fileID: 1658838097}
     - target: {fileID: 8614585620336488176, guid: 1626a7a3f018845419a4476638df6690, type: 3}
       propertyPath: m_Name
       value: 'PurpleWitch '
@@ -16663,6 +16675,10 @@ PrefabInstance:
       propertyPath: right
       value: 25.67
       objectReference: {fileID: 0}
+    - target: {fileID: 5191717004207798084, guid: 1626a7a3f018845419a4476638df6690, type: 3}
+      propertyPath: PlayerPos
+      value: 
+      objectReference: {fileID: 1658838097}
     - target: {fileID: 8614585620336488176, guid: 1626a7a3f018845419a4476638df6690, type: 3}
       propertyPath: m_Name
       value: 'PurpleWitch '
