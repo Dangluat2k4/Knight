@@ -17,7 +17,6 @@ public class PlayerGroundState : PlayerState
     public override void Exit()
     {
         base.Exit();
-
     }
     public override void Update()
     {
@@ -27,7 +26,6 @@ public class PlayerGroundState : PlayerState
         {
             stateMachine.ChangeState(player.primaryAttack);
             //    Debug.Log("taans cong");
-            player.Attack();
 
         }
         if (!player.IsGroundDetected())
