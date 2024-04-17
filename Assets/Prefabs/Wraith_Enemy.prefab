@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8303287598369154308}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: AttackCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2359783073490766267}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: mini
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 114709138388234996}
   - component: {fileID: 8025109962166867275}
   - component: {fileID: 6879093443163873922}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4653446612419380548}
   - component: {fileID: 7910893500300358724}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 603474253679261608}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 182881769605717153}
   - component: {fileID: 1330716857289130747}
   - component: {fileID: 2900649851681875798}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 9151024769540646995}
   - component: {fileID: 3438091817786318928}
   - component: {fileID: 7631110362219470062}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 3563418298853284347}
   - component: {fileID: 1775674897438845317}
   - component: {fileID: 7298062951604906436}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Wraith_Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -508,7 +508,7 @@ MonoBehaviour:
   knockbackDirection: {x: 0, y: 0}
   knockbackDuration: 0
   attackCkeck: {fileID: 8303287598369154308}
-  attackCkeckRadius: 4.42
+  attackCkeckRadius: 6.58
   groundCheck: {fileID: 7182343977220467964}
   groundCheckDistance: 3.08
   wallCheck: {fileID: 603474253679261608}
@@ -525,13 +525,13 @@ MonoBehaviour:
   moveSpeed: 2
   idleTime: 1
   BattleTime: 9
-  attackDistance: 5.02
-  attackCooldown: 5
+  attackDistance: 7.04
+  attackCooldown: 2
   lastTimeAttacked: 0
-  left: 19.28
-  right: 24.4
-  speed: 1
-  WraithMini: {fileID: 2200349692222473531, guid: 8582d081e224a054db9b6d790f448eca, type: 3}
+  left: 90.83
+  right: 109.19
+  speed: 2
+  WraithMini: {fileID: 4949826085231406551, guid: 6afcec606f4043040ab0e2689d104437, type: 3}
   MiniPos: {fileID: 2359783073490766267}
 --- !u!50 &8131566108534933817
 Rigidbody2D:
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  maxHealth: 100
+  maxHealth: 500
   currentHealth: 0
 --- !u!1 &8054420698834341610
 GameObject:
@@ -633,7 +633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3882986381271534118}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 7295113999906693359}
   - component: {fileID: 8340676445100183608}
   - component: {fileID: 3892664333315831329}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Entity_Status_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7182343977220467964}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
 
 public class Wraith_Enemy : Enemy
@@ -23,7 +24,7 @@ public class Wraith_Enemy : Enemy
 
         idleState = new WraithIdleState(this, stateMachine, "Idle", this); 
         moveState = new WraithMoveState(this, stateMachine, "Move", this);
-        battleState = new WraithBattleState(this, stateMachine, "IsAttack", this);
+        battleState = new WraithBattleState(this, stateMachine, "Move", this);
         attackStateImmirtal = new WraithimmirtalWithPlayer(this, stateMachine, "IsImmune", this);
         attackStateMini = new WraithAttackState(this, stateMachine, "IsAttack", this);
     }
@@ -39,5 +40,10 @@ public class Wraith_Enemy : Enemy
     protected override void Update()
     {
         base.Update();
+    }
+    public override void Die()
+    {
+        base.Die();
+        Destroy(gameObject);
     }
 }
