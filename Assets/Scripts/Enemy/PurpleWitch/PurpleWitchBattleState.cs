@@ -41,6 +41,12 @@ public class PurpleWitchBattleState : EnemyState
                 stateMachine.ChangeState(purpleWitch.idleState);
         }
 
+        float desiredHeight = player.position.y + 1.5f;
+
+        Vector3 newPosition = purpleWitch.transform.position;
+        newPosition.y = Mathf.Max(newPosition.y, desiredHeight); // Chọn giá trị cao nhất giữa độ cao hiện tại và độ cao mong muốn
+        purpleWitch.transform.position = newPosition;
+
         if (direction.x > 0)
             moveDir = 1;
         else if (direction.x < 0)
@@ -64,4 +70,5 @@ public class PurpleWitchBattleState : EnemyState
 
         return false;
     }
+
 }

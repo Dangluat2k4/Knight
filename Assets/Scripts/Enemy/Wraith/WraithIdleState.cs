@@ -23,7 +23,7 @@ public class WraithIdleState : WraithGroundState
     public override void Update()
     {
         base.Update();
-        if (stateTimer < 0)
+        if (stateTimer < 0f)
         {
             stateMachine.ChangeState(wraith.moveState);
         }
