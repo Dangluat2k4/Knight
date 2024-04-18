@@ -48,6 +48,13 @@ public class FireShot : MonoBehaviour
             }
             Destroy(gameObject); // Hủy đạn sau khi va chạm với Enemy
         }
-      
+
+
+        if (collision.gameObject.tag == "TileMap")
+        {
+            Debug.Log("va cham");
+            Destroy(gameObject); // Hủy đạn sau khi va chạm với Enemy
+        }
+
     }
 }
