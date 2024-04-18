@@ -85,7 +85,7 @@ public class Player :Entity
 
         dashUsageTimer -= Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && dashUsageTimer < 0)
+        if (Input.GetKeyDown(KeyCode.T) && dashUsageTimer < 0)
         {
             dashUsageTimer = dashCoolDown;
             dashDir = Input.GetAxisRaw("Horizontal");
