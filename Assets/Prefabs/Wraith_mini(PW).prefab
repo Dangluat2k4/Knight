@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2623636046899276205}
   - component: {fileID: 2371886645673809036}
   - component: {fileID: 1070913786526743581}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 5102987104164230684}
   - component: {fileID: 3653214223065963034}
   - component: {fileID: 4305894233492054479}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 7460144382480598403}
   - component: {fileID: 9098856361950317768}
   - component: {fileID: 2092515869519978471}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Wraith_mini(PW)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5689187525477149062}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6126029105640164735}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: AttackCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 8625311438515833568}
   - component: {fileID: 2036003809742235015}
   - component: {fileID: 7800715596612680803}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Entity_Status_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 8892450126667167924}
   - component: {fileID: 185623115604523110}
   - component: {fileID: 4811772063239357382}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +631,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2165964764949949308}
   - component: {fileID: 2227129957402488188}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,7 +719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 359782003516806810}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,7 +750,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3629261543108481060}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

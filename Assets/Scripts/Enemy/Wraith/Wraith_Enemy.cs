@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Wraith_Enemy : Enemy
 {
@@ -45,5 +46,6 @@ public class Wraith_Enemy : Enemy
     {
         base.Die();
         Destroy(gameObject);
+        SceneManager.LoadScene(0);
     }
 }

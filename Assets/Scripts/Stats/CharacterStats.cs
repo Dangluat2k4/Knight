@@ -27,14 +27,11 @@ public class CharacterStats : MonoBehaviour
         if (currentHealth < 0)
         {
             Die();
-            Debug.Log("Die");
         }
     }
     public virtual void healing(int _hp)
     {
         currentHealth += _hp;
-       
-            Debug.Log("hồi hp");
         
     }
 
