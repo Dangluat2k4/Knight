@@ -24,7 +24,6 @@ public class PlayerIdleState : PlayerGroundState
         base.Update();
         if (xInput == player.facingDir && player.IsWallDetected())
         {
-            Debug.Log("is ground");
             return;
 
         }
