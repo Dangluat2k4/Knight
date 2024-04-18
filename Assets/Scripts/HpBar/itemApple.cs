@@ -10,7 +10,6 @@ public class itemApple : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("va cham");
 
             CharacterStats apple = collision.gameObject.GetComponent<CharacterStats>();
             if (apple != null)

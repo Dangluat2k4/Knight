@@ -13,8 +13,6 @@ public class PurpleWitchAnimationTriggers : MonoBehaviour
 
     private IEnumerator CreateAndDestroyPurpleWitch()
     {
-        Debug.Log("create");
-
         // Tạo ra bản sao của đối tượng PurpleWitch
         GameObject clone = Instantiate(purpleWitch.ClonePW, purpleWitch.PlayerPos.position, Quaternion.identity);
 

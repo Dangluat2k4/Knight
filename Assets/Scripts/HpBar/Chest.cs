@@ -26,7 +26,6 @@ public class Chest : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("chess");
             DestroyChest();
         }
 

@@ -22,7 +22,7 @@ public class PlayerGroundState : PlayerState
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J)|| Input.GetKeyDown(KeyCode.F))
         {
             stateMachine.ChangeState(player.primaryAttack);
             //    Debug.Log("taans cong");
@@ -36,7 +36,7 @@ public class PlayerGroundState : PlayerState
             stateMachine.ChangeState(player.jumpState);
    //         Debug.Log("jump");
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0)|| Input.GetKeyDown(KeyCode.E))
         {
             stateMachine.ChangeState(player.lightBallState);
         //    Debug.Log("light Ball");
