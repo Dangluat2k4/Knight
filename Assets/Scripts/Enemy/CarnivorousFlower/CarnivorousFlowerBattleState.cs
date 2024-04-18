@@ -15,7 +15,6 @@ public class CarnivorousFlowerBattleState : EnemyState
     {
         base.Enter();
         player = GameObject.Find("Player").transform;
-        Debug.Log("Im in battle state");
     }
     public override void Update()
     {
