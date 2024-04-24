@@ -31,12 +31,12 @@ public class PlayerGroundState : PlayerState
         if (!player.IsGroundDetected())
             stateMachine.ChangeState(player.airState);
 
-        if (Input.GetKeyDown(KeyCode.Space) && player.IsGroundDetected())
+        if (Input.GetKeyDown(KeyCode.Space) && player.IsGroundDetected() || Input.GetKeyDown(KeyCode.K) && player.IsGroundDetected())
         {
             stateMachine.ChangeState(player.jumpState);
    //         Debug.Log("jump");
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0)|| Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Mouse0)|| Input.GetKeyDown(KeyCode.I))
         {
             stateMachine.ChangeState(player.lightBallState);
         //    Debug.Log("light Ball");
